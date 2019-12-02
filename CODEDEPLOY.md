@@ -20,3 +20,19 @@ aws s3api put-bucket-versioning --bucket aws-devops-course-stephane --versioning
 ```
 aws deploy push --application-name CodeDeployDemo --s3-location s3://aws-devops-course-stephane/codedeploy-demo/app.zip --ignore-hidden-files --region eu-west-1 --profile aws-devops
 ```
+
+
+# Installing the CodeDeploy agent on EC2(Ubuntu)
+```
+
+sudo apt-get update
+sudo apt-get install ruby
+sudo apt-get install wget
+cd /home/ubuntu
+wget https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+sudo service codedeploy-agent status
+sudo service codedeploy-agent start
+sudo service codedeploy-agent status
+```
