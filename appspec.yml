@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /form1.html
+  - source: /index.html
     destination: /var/www/html/
 hooks:
   ApplicationStop:
